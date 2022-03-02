@@ -205,19 +205,60 @@ let alumnos = [
 //    Lucille Copeland
 //    Pollard Shaw
 //    .....
+for( let pos = 0; pos < alumnos.length; pos++) {
+  let alumno = alumnos[pos]
+  console.log(alumno.nombre + ' ' + alumno.apellido)
+}
 
+
+// [] -> corchetes
+// {} -> llaves
 
 // 2) Calcula el promedio de las calificaciones obtenidas por Jody Leonard y muestra el resultado
+let Jody = alumnos[4]
+console.log(Jody.nombre)
+console.log(Jody.calificaciones[1].calificacion)
+console.log(Jody.calificaciones[2].calificacion)
+
+let promedio = 0;
+for( let pos = 0; pos < Jody.calificaciones.length; pos++){
+    promedio += Jody.calificaciones[pos].calificacion
+}
+
+promedio = promedio / Jody.calificaciones.length;
+
+console.log('El promedio de las calificaciones es', promedio)
+
 
 
 // 3) Lista aquellas materías que reprobó Carson Deleon
 //    Para considerar una materia como 'aprobada' es necesario obtener una calificación mínima de 60.
+let carson = alumnos[1]
+let calificaciones = carson.calificaciones
+
+for(let i=0; i < calificaciones.length; i++){
+  let materiaInfo = calificaciones[i]
+
+  if(materiaInfo.calificacion < 60) {
+    console.log(materiaInfo.materia)
+  }
+}
+
+
+
+
 
 
 // 4) Muestra en pantalla el nombre completo, calle y número de aquellos alumnos que viven en la colonia Miravalle 
+for(let i=0; i < alumnos.length; i++){
+  if(alumnos[i].direccion.colonia == 'Miravalle') {      // -> la colonia es Miravalle?
+    console.log(alumnos[i].nombre)
+  } 
+}
 
 
-// 5) Obten la calificación promedio de todos aquellos alumnos que cursan la materia de programación
+
+// 5) Obtén la calificación promedio de todos aquellos alumnos que cursan la materia de programación
 
 
 // 6) Calcula el promedio de las calificaciones obtenida por cada alumno
