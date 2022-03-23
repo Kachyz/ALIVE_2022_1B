@@ -1,0 +1,16 @@
+div {
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+#rojo {
+    background-color: rgb( 255, 0, 0);
+}
+#verde {
+    background-color: green;
+}
+#azul {
+    background-color: blue;
+}
